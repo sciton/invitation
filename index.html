@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Приглашение</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cards-container">
+    <div class="card">
+      <h2>Вы приглашены на свадьбу</h2>
+	  <h1>Антона и Дарьи</h1>
+      <p class="event-date">3-4 июля 2026 г.</p>
+      <p class="content">Санкт-Петербург</p>
+	 
+    </div>
+
+    <!-- Карточка 4: Программа -->
+    <div class="card">
+	  <p class="label">Программа</p>
+      
+	  <p class="text">Свадьба будет проходить в течение двух дней.</p>
+	  <p class="time-stamp">3 июля - торжественная часть</p>
+	  <p class="text">Петергоф, Золотой зал <a href="https://yandex.ru/maps/-/CLh0nK7U">ЗАГСа Петродворцового района</a></p>
+	  <ul class="program">
+        <li>16:20 — Начало церемонии</li>
+        <li>17:00 — Начало банкета</li>
+      </ul>
+	  <p class="time-stamp">4 июля - неформальная встреча с друзьями и близкими</p>
+    </div>
+
+    <!-- Карточка 5: RSVP -->
+<div class="card">
+  <button id="show-form-btn" class="rsvp-button">Подтвердить участие</button>
+</div>
+	
+		
+	<!-- Контейнер для формы (изначально скрыт) -->
+	<div id="form-container" class="card" style="display: none; padding: 20px;">
+	  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf93jdR70XjqDYiSypShM14JQP2SakFq8hXkaarjZXxIPTNBQ/viewform?embedded=true" 
+	  width="100%" 
+	  height="414" 
+	  frameborder="0" 
+	  marginheight="0" 
+	  marginwidth="0">Загрузка…
+	  </iframe>
+	
+  </div>
+  <script>
+	  document.getElementById('show-form-btn').addEventListener('click', function() {
+		const formContainer = document.getElementById('form-container');
+		formContainer.style.display = 'block';
+		this.closest('.card').style.display = 'none'; // скрываем кнопку после нажатия
+	  });
+	</script>
+</body>
+</html>

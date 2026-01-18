@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: url('flowers-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.card {
+  aspect-ratio: 13.5 / 9;
+  background: rgba(255, 255, 255, 0.88) url('5646910.svg') no-repeat center center;
+  background-size: 100%; /* или конкретные значения, см. ниже */
+  padding: 24px;
+  border-radius: 16px;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;     /* ← КЛЮЧЕВОЕ СВОЙСТВО */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.0rem;
+  margin: 0;
+}
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Стили для временных меток */
+.time-stamp {
+  font-weight: bold;
+  text-align: left;
+  margin: 16px 0 8px 0;
+  font-size: 1.15rem; /* чуть крупнее обычного текста для акцента */
+  color: #2c3e50;
+}
+
+/* Стили для описательного текста */
+.text {
+  font-size: 0.95rem; /* уменьшаем шрифт */
+  text-align: justify; /* выравнивание по ширине */
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #34495e;
+}
+
+/* Убедимся, что ссылки внутри .text не ломают стиль */
+.text a {
+  color: #8e44ad;
+  text-decoration: none;
+}
+.text a:hover {
+  text-decoration: underline;
+}
+
+.content, .event-date, .event-time {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.program {
+  list-style: none;
+  text-align: left;
+  margin-top: 12px;
+  padding-left: 0;
+}
+
+.program li {
+  margin: 8px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.program li::before {
+  content: "•";
+  color: #8e44ad;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.rsvp-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 36px;
+  background-color: #3E97D1;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  transition: background-color 0.3s ease;
+}
+
+.rsvp-button:hover {
+  background-color: #71368a;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px 16px;
+  }
+
+  .card h1 {
+    font-size: 2rem;
+  }
+
+  .content, .event-date, .event-time, .label {
+    font-size: 1.05rem;
+  }
+}
