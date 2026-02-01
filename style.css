@@ -64,7 +64,7 @@ body::before {
 
 
 .label {
-  font-family: 'Alegreya';
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 6.0vw;
@@ -73,7 +73,7 @@ body::before {
 
 /* Стили для временных меток */
 .time-stamp {
-  font-family: 'Alegreya';
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 700;
   font-size: 4.0vw;
@@ -82,7 +82,7 @@ body::before {
 
 /* Стили для описательного текста */
 .text {
-  font-family: 'Alegreya';
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 3.0vw;
@@ -95,7 +95,7 @@ a.text {
 }
 
 .content{
-  font-family: 'Alegreya';
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 4.0vw;
@@ -103,7 +103,7 @@ a.text {
 }
 
 .event-date{
-  font-family: 'Alegreya', regular;
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 600;
   font-size: 5.0vw;
@@ -111,7 +111,7 @@ a.text {
 }
 
 .names{
-  font-family: 'Alegreya', regular;
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 600;
   font-size: 5.0vw;
@@ -120,7 +120,7 @@ a.text {
 }
 
 .event-time {
-  font-family: 'Alegreya', regular;
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 600;
   font-size: 3.0vw;
@@ -135,7 +135,7 @@ a.text {
   color: white;
   text-decoration: none;
   border-radius: 5vw;
-  font-family: 'Alegreya';
+  font-family: 'Alegreya', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 4.0vw;
